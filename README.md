@@ -2,7 +2,7 @@
 
 Demo: [Sandbox](https://codesandbox.io/s/react-use-navigate-list-cgsn2?file=/src/App.js)
 
-🎉 react-use-navigate-list hook allows navigating through the list using arrow buttons, optimized to reduce unnecessary re-renders.
+🎉 react-use-navigate-list hook makes the list interactive using arrow buttons. It is optimized to reduce unnecessary re-renders
 
 ## Installation
 
@@ -31,37 +31,33 @@ $ yarn add react-use-navigate-list
 ## Example
 
 ```jsx
-    import React from "react";
-    import useNavigateList from "react-use-navigate-list";
-    
-    const items = [
-        { id: 1, name: "Banana" },
-        { id: 2, name: "Pineapple" },
-        { id: 3, name: "Blueberry" },
-    ];
-    
-    function App() {
-        const { activeIndex, itemProps } = useNavigateList({
-            list: itemList,
-            onSelect: (item) => {
-                console.log(item);
-            },
-        });
-    
-        return (
-            <>
-                {itemList.map((item, index) => (
-                    <div
-                        {...itemProps(item)}
-                        key={item.id}
-                        className={activeIndex === index ? "active-className" : ""}
-                    >
-                        {item.name}
-                    </div>
-                ))}
-            </>
-        );
-    }
+import React from "react";
+import useNavigateList from "react-use-navigate-list";
+
+const itemList = [
+  { id: 1, name: "Banana" },
+  { id: 2, name: "Pineapple" },
+  { id: 3, name: "Blueberry" },
+];
+
+function App() {
+  const { activeIndex, itemProps } = useNavigateList({
+    list: itemList,
+    onSelect: (item) => {
+      console.log(item);
+    },
+  });
+
+  return itemList.map((item, index) => (
+    <div
+      {...itemProps(item)}
+      key={item.id}
+      className={activeIndex === index ? "active-className" : ""}
+    >
+      {item.name}
+    </div>
+  ));
+}
 ```
 
 ## License
