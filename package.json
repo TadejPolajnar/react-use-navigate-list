@@ -1,11 +1,12 @@
 {
   "name": "react-use-navigate-list",
-  "version": "0.1.0",
+  "version": "0.1.6",
   "description": "Navigate through the list using arrow buttons",
   "author": "TadejPolajnar",
   "license": "MIT",
   "type": "module",
   "private": false,
+  "main": "src/index.ts",
   "keywords": [
     "react",
     "hooks",

@@ -13,6 +13,7 @@ $ yarn add react-use-navigate-list
 
 ## Features
 
+- Typescript support
 - Navigate through the list using <kbd>ArrowUp</kbd> and <kbd>ArrowDown</kbd> buttons
 - Select item by pressing <kbd>Enter</kbd>
 - Supports vertical and horizontal navigation
